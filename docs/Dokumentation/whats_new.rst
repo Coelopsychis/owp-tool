@@ -114,7 +114,6 @@ Improvements
 - Improve result visualization
 - Add new and improve old tooltips
 
-
 Fixes
 -----
 
