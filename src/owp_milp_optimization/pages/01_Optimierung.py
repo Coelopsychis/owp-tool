@@ -65,13 +65,13 @@ with st.sidebar:
 
     logo_sw = os.path.join(
         os.path.dirname(__file__), '..', 'img',
-        'Logo_Kreis_Schleswig-Flensburg.svg'
+        'Logo_Klimaschutzmanagement.svg'
         )
     st.image(logo_sw, width='stretch')
 
     logo_sw = os.path.join(
         os.path.dirname(__file__), '..', 'img',
-        'Logo_Klimaschutzmanagement.svg'
+        'Logo_Kreis_Schleswig-Flensburg.svg'
         )
     st.image(logo_sw, width='stretch')
 
