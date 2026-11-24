@@ -188,7 +188,11 @@ with st.sidebar:
 # %% MARK: Main Window
 if 'energy_system' not in ss:
     st.header('Simulationsergebnisse')
-    st.error('**Error:** Es sind noch keine Ergebnisse vorhanden. Sie müssen zuerst eine Optimierung auf der dafür vorgesehenen Seite durchführen.')
+    st.error(
+        '**Error:** Es sind noch keine Ergebnisse vorhanden. Sie müssen ' \
+        'zuerst eine Optimierung auf der dafür vorgesehenen Seite ' \
+        'durchführen.'
+    )
 
     with st.container(border=True):
         st.page_link(
