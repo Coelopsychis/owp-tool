@@ -35,6 +35,8 @@ Improvements
   import name ``owp_tool``, GitHub repository and documentation)
 - Describe the installation from PyPI and the start with ``owp-tool`` in the
   README and the documentation
+- Add GitHub workflow that publishes releases to PyPI (pre-releases to
+  TestPyPI)
 
 Fixes
 -----
