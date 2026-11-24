@@ -9,10 +9,10 @@ from pathlib import Path
 import pytest
 from streamlit.testing.v1 import AppTest
 
-import owp_milp_optimization
-from owp_milp_optimization import helpers
+import owp_tool
+from owp_tool import helpers
 
-PKG_DIR = Path(owp_milp_optimization.__file__).parent
+PKG_DIR = Path(owp_tool.__file__).parent
 
 
 def _not_installed(name):
@@ -37,12 +37,12 @@ def test_license_from_metadata(tmp_path, monkeypatch, folder):
     New build backends list the file as License-File and store it in a
     "licenses" folder, old ones store it in the metadata folder itself.
     """
-    dist_info = tmp_path / 'owp_milp_optimization-1.0.dist-info'
+    dist_info = tmp_path / 'owp_tool-1.0.dist-info'
     (dist_info / folder).mkdir(parents=True, exist_ok=True)
     (dist_info / folder / 'LICENSE').write_text('Lizenz ß', encoding='utf-8')
     header = 'License-File: LICENSE\n' if folder else ''
     (dist_info / 'METADATA').write_text(
-        'Metadata-Version: 2.1\nName: owp_milp_optimization\n' + header,
+        'Metadata-Version: 2.1\nName: owp-tool\n' + header,
         encoding='utf-8'
     )
     monkeypatch.setattr(
@@ -55,7 +55,7 @@ def test_license_from_metadata(tmp_path, monkeypatch, folder):
 def test_license_from_source_checkout(tmp_path, monkeypatch):
     """Without an installation, it reads the LICENSE of the source checkout."""
     (tmp_path / 'LICENSE').write_text('Lizenz ß', encoding='utf-8')
-    module = tmp_path / 'src' / 'owp_milp_optimization' / 'helpers.py'
+    module = tmp_path / 'src' / 'owp_tool' / 'helpers.py'
     # POSIX resolves '..' only through existing folders
     module.parent.mkdir(parents=True)
     monkeypatch.setattr(metadata, 'distribution', _not_installed)
@@ -65,7 +65,7 @@ def test_license_from_source_checkout(tmp_path, monkeypatch):
 
 def test_no_license_found(tmp_path, monkeypatch):
     """Returns None instead of failing if there is no license file at all."""
-    module = tmp_path / 'site-packages' / 'owp_milp_optimization' / 'helpers.py'
+    module = tmp_path / 'site-packages' / 'owp_tool' / 'helpers.py'
     module.parent.mkdir(parents=True)
     monkeypatch.setattr(metadata, 'distribution', _not_installed)
     monkeypatch.setattr(helpers, '__file__', str(module))

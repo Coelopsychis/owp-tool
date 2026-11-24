@@ -388,7 +388,7 @@ class EnergySystem():
             # temporary directory of the user, which is removed right after
             # the optimization. Only the content of the log is kept.
             with tempfile.TemporaryDirectory(
-                    prefix='owp_milp_', ignore_cleanup_errors=True
+                    prefix='owp_tool_', ignore_cleanup_errors=True
                     ) as logdir:
                 logpath = os.path.join(
                     logdir, f'{self.param_opt["Solver"].lower()}_log.txt'

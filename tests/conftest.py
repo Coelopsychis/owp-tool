@@ -1,4 +1,4 @@
-"""Shared fixtures for the tests of ``owp_milp_optimization.model``.
+"""Shared fixtures for the tests of ``owp_tool.model``.
 
 The fixtures provide
 
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from owp_milp_optimization import model
+from owp_tool import model
 
 N_STEPS = 24
 
@@ -176,7 +176,7 @@ def shipped_defaults():
     Units are numbered like the dashboard does (``hp`` -> ``hp1``).
     Returns ``(param_units, param_opt)``.
     """
-    input_dir = resources.files('owp_milp_optimization') / 'input'
+    input_dir = resources.files('owp_tool') / 'input'
     with (input_dir / 'param_units.json').open(encoding='utf-8') as f:
         param_units = {f'{cat}1': p for cat, p in json.load(f).items()}
     with (input_dir / 'param_opt.json').open(encoding='utf-8') as f:

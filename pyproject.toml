@@ -3,7 +3,7 @@ requires = ["flit_core >=3.11,<5"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "owp_milp_optimization"
+name = "owp-tool"
 description = "District heating system unit design and dispatch optimization dashboard using Mixed Integer Linear Programming (MILP)."
 dynamic = ["version"]
 readme = "README.md"
@@ -62,13 +62,13 @@ dev = [
 ]
 
 [project.scripts]
-owp-milp-optimization = "owp_milp_optimization.cli:main"
+owp-tool = "owp_tool.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/maltefritz/owp_milp_optimization"
-Documentation = "https://owp-milp-optimization.readthedocs.io/de/latest/"
-Issues = "https://github.com/maltefritz/owp_milp_optimization/issues"
-Changelog = "https://owp-milp-optimization.readthedocs.io/de/latest/Dokumentation/whats_new.html"
+Homepage = "https://github.com/maltefritz/owp-tool"
+Documentation = "https://owp-tool.readthedocs.io/de/latest/"
+Issues = "https://github.com/maltefritz/owp-tool/issues"
+Changelog = "https://owp-tool.readthedocs.io/de/latest/Dokumentation/whats_new.html"
 
 [tool.flit.sdist]
 exclude = [

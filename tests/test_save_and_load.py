@@ -20,10 +20,10 @@ import pytest
 import streamlit as st
 from streamlit.testing.v1 import AppTest
 
-import owp_milp_optimization
-from owp_milp_optimization import helpers
+import owp_tool
+from owp_tool import helpers
 
-PKG_DIR = Path(owp_milp_optimization.__file__).parent
+PKG_DIR = Path(owp_tool.__file__).parent
 ES_FILES = ['data_input.csv', 'param_opt.json', 'param_units.json']
 RESULT_FILES = [
     'Ergebnisse_Zeitreihen.csv',

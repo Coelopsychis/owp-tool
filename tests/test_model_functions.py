@@ -2,7 +2,7 @@
 import pandas as pd
 import pytest
 
-from owp_milp_optimization.model import (
+from owp_tool.model import (
     LCOH, calc_bwsf, calc_cost, check_column, result_labeling
 )
 

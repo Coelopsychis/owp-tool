@@ -10,7 +10,7 @@ import oemof.solph as solph
 import pandas as pd
 import pytest
 
-from owp_milp_optimization.model import EnergySystem, calc_bwsf
+from owp_tool.model import EnergySystem, calc_bwsf
 
 ALL_CATS = ['hp', 'ccet', 'ice', 'gb', 'eb', 'sol', 'exhs', 'tes']
 

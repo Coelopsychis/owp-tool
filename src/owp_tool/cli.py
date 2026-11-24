@@ -1,6 +1,6 @@
 """Command line entry point of the dashboard.
 
-After the installation, ``owp-milp-optimization`` starts the dashboard. It
+After the installation, ``owp-tool`` starts the dashboard. It
 does the same as ``streamlit run Home.py`` in the package directory.
 """
 import sys
@@ -15,7 +15,7 @@ def main():
     """Start the dashboard with ``streamlit run``.
 
     Further arguments are passed on to ``streamlit run``, e.g.
-    ``owp-milp-optimization --server.port 8502``. Streamlit reads the theme
+    ``owp-tool --server.port 8502``. Streamlit reads the theme
     from ``.streamlit/config.toml`` next to ``Home.py``, so the dashboard can
     be started from any working directory.
     """

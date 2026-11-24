@@ -180,7 +180,7 @@ with st.expander('Copyright'):
     if lictext is None:
         lictext = (
             'Der Lizenztext ist [auf GitHub]'
-            '(https://github.com/maltefritz/owp_milp_optimization/blob/main/'
+            '(https://github.com/maltefritz/owp-tool/blob/main/'
             'LICENSE) einsehbar.'
             )
 

@@ -26,7 +26,7 @@ from pyomo.contrib.appsi.base import TerminationCondition as AppsiTC
 from pyomo.environ import Var, value
 from pyomo.opt import TerminationCondition as OptTC
 
-from owp_milp_optimization.model import EnergySystem
+from owp_tool.model import EnergySystem
 
 # solph warns when the solver ends without an optimal solution. Tests that
 # provoke this on purpose check the status returned by solve_model instead.

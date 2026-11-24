@@ -15,18 +15,18 @@ from pathlib import Path
 
 import pytest
 
-import owp_milp_optimization
-from owp_milp_optimization import cli
+import owp_tool
+from owp_tool import cli
 
-PKG_DIR = Path(owp_milp_optimization.__file__).parent
-COMMAND = 'owp-milp-optimization'
+PKG_DIR = Path(owp_tool.__file__).parent
+COMMAND = 'owp-tool'
 
 
 def test_command_is_installed():
     """The installed package provides the command."""
     entry_points = metadata.entry_points(group='console_scripts', name=COMMAND)
     assert [ep.value for ep in entry_points] == [
-        'owp_milp_optimization.cli:main'
+        'owp_tool.cli:main'
     ]
 
 
@@ -67,7 +67,7 @@ def test_command_starts_dashboard(tmp_path, how):
         assert command is not None, f'{COMMAND} is not installed'
         start = [command]
     else:
-        start = [sys.executable, '-m', 'owp_milp_optimization']
+        start = [sys.executable, '-m', 'owp_tool']
     port = _free_port()
     start += [
         '--server.headless', 'true', '--server.port', str(port),

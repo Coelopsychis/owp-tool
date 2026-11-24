@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join('..', 'src')))
 
 # The version is only defined in the package itself
-from owp_milp_optimization import __version__  # noqa: E402
+from owp_tool import __version__  # noqa: E402
 
 # -- General configuration ------------------------------------------------
 
@@ -41,7 +41,7 @@ mathjax3_config = {
 # landing page
 # master_doc = 'contents'
 # names, years, etc
-project = 'owp_milp_optimization'
+project = 'owp-tool'
 year = '2024-2026'
 author = 'Malte Fritz & Jonas Freißmann'
 copyright = '{0}, {1}'.format(year, author)
@@ -71,7 +71,7 @@ exclude_patterns = ['_build']
 bibtex_bibfiles = ['references.bib']
 
 # links to github
-github_repo_url = "https://github.com/maltefritz/owp_milp_optimization"
+github_repo_url = "https://github.com/maltefritz/owp-tool"
 extlinks = {
     "issue": (f"{github_repo_url}/issues/%s", "#%s"),  # noqa: WPS323
     "pr": (f"{github_repo_url}/pull/%s", "PR #%s"),  # noqa: WPS323
@@ -147,7 +147,7 @@ copybutton_prompt_text = r'>>> |\.\.\. '
 copybutton_prompt_is_regexp = True
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'owp_milp_optimization_doc'
+htmlhelp_basename = 'owp_tool_doc'
 
 # -- Options for linkcheck ----------------------------------------------
 

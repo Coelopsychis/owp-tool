@@ -17,7 +17,7 @@ def read_license():
     is used. Returns None if no license file is available.
     """
     try:
-        dist = metadata.distribution('owp_milp_optimization')
+        dist = metadata.distribution('owp-tool')
     except metadata.PackageNotFoundError:
         pass
     else:
@@ -154,7 +154,7 @@ def footer(icon_base64s):
     col_in.markdown(button_html("Inno!Nord", "https://inno-nord-projekt.de/", "#00395B"), unsafe_allow_html=True)
     col_nl.markdown(button_html("Newsletter", "https://seu2.cleverreach.com/f/370472-374367/", "#74ADC0"), unsafe_allow_html=True)
     col_hs.markdown(button_html("HS Flensburg", "https://hs-flensburg.de/", "#EC6707"), unsafe_allow_html=True)
-    col_help.markdown(button_html("Dokumentation", "https://owp-milp-optimization.readthedocs.io/de/latest/index.html", "#B54036"), unsafe_allow_html=True)
+    col_help.markdown(button_html("Dokumentation", "https://owp-tool.readthedocs.io/de/latest/index.html", "#B54036"), unsafe_allow_html=True)
 
     if col_bot.button(
         '© Malte Fritz & Jonas Freißmann :material/open_in_new:',
