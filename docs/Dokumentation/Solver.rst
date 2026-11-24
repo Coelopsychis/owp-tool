@@ -76,7 +76,7 @@ HiGHS wird über die in ``oemof.solph`` integrierte Anbindung genutzt, die auf d
 
 .. code-block:: batch
 
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Für die Weiterentwicklung des Tools kann stattdessen die editierbare Installation aus dem Quellcode verwendet werden:
 
@@ -286,7 +286,7 @@ Das Tool wurde möglicherweise nicht vollständig in der aktiven virtuellen Umge
 
 .. code-block:: batch
 
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Für eine editierbare Installation aus dem Quellcode wird im Hauptverzeichnis des Repositorys folgender Befehl ausgeführt:
 

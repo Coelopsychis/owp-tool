@@ -65,7 +65,7 @@ Danach werden das OWP-Tool und alle benötigten Abhängigkeiten installiert:
 
 .. code-block:: batch
 
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Installation unter macOS
 ========================
@@ -106,7 +106,7 @@ Innerhalb der aktivierten Umgebung werden ``pip`` und anschließend das OWP-Tool
 .. code-block:: batch
 
    python -m pip install --upgrade pip
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Installation unter Linux
 ========================
@@ -147,7 +147,7 @@ Innerhalb der aktivierten Umgebung werden ``pip`` und anschließend das OWP-Tool
 .. code-block:: batch
 
    python -m pip install --upgrade pip
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Installation überprüfen
 =======================
@@ -156,7 +156,7 @@ Nach der Installation kann geprüft werden, ob das OWP-Tool installiert ist:
 
 .. code-block:: batch
 
-   python -m pip show owp-milp-optimization
+   python -m pip show owp-tool
 
 Es sollten unter anderem der Name und die installierte Version des Tools angezeigt werden.
 
@@ -185,8 +185,8 @@ Das Repository wird mit folgendem Befehl heruntergeladen:
 
 .. code-block:: batch
 
-   git clone https://github.com/maltefritz/owp_milp_optimization.git
-   cd owp_milp_optimization
+   git clone https://github.com/maltefritz/owp-tool.git
+   cd owp-tool
 
 Alle weiteren Befehle werden im Hauptverzeichnis des Repositorys ausgeführt (in diesem Verzeichnis befindet sich unter anderem die Datei ``pyproject.toml``).
 
@@ -222,7 +222,7 @@ Eine neue Version des Tools wird in der aktivierten virtuellen Umgebung installi
 
 .. code-block:: batch
 
-   python -m pip install --upgrade owp-milp-optimization
+   python -m pip install --upgrade owp-tool
 
 Bei einer Installation aus dem Quellcode mit Git wird der aktuelle Stand im Hauptverzeichnis des Repositorys abgerufen:
 
@@ -268,8 +268,8 @@ Die ausgegebenen Pfade sollten auf den Ordner ``.venv`` verweisen.
 Das Tool ist nicht installiert
 ------------------------------
 
-Meldet ``python -m pip show owp-milp-optimization`` das Paket als nicht gefunden, ist das Tool in der aktiven Umgebung nicht installiert. Dies kann daran liegen, dass die virtuelle Umgebung nicht aktiviert ist (siehe oben) oder die Installation noch nicht durchgeführt wurde. Die Umgebung muss aktiviert und das Tool installiert werden:
+Meldet ``python -m pip show owp-tool`` das Paket als nicht gefunden, ist das Tool in der aktiven Umgebung nicht installiert. Dies kann daran liegen, dass die virtuelle Umgebung nicht aktiviert ist (siehe oben) oder die Installation noch nicht durchgeführt wurde. Die Umgebung muss aktiviert und das Tool installiert werden:
 
 .. code-block:: batch
 
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool

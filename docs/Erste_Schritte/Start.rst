@@ -5,7 +5,7 @@ Start des Tools
 Anwendung starten
 =================
 
-Die Anwendung wird mit dem Befehl ``owp-milp-optimization`` gestartet. Das Verzeichnis, aus dem der Befehl aufgerufen wird, spielt dabei keine Rolle. In den folgenden Beispielen ist der Pfad der Ordner, in dem die virtuelle Umgebung ``.venv`` erstellt wurde.
+Die Anwendung wird mit dem Befehl ``owp-tool`` gestartet. Das Verzeichnis, aus dem der Befehl aufgerufen wird, spielt dabei keine Rolle. In den folgenden Beispielen ist der Pfad der Ordner, in dem die virtuelle Umgebung ``.venv`` erstellt wurde.
 
 .. important::
    Die Anwendung muss aus derselben virtuellen Umgebung gestartet werden, in der das Tool installiert wurde. Andernfalls kann es zu Problemen bei der Nutzung kommen.
@@ -18,7 +18,7 @@ Windows
 
    cd C:\Pfad\zum\Projektordner
    .venv\Scripts\activate
-   owp-milp-optimization
+   owp-tool
 
 macOS und Linux
 ---------------
@@ -27,7 +27,7 @@ macOS und Linux
 
    cd /pfad/zum/projektordner
    source .venv/bin/activate
-   owp-milp-optimization
+   owp-tool
 
 
 Aufrufen des Tools
@@ -78,17 +78,17 @@ Die ausgegebenen Pfade sollten auf den Ordner ``.venv`` verweisen.
 Der Befehl wird nicht gefunden
 ------------------------------
 
-Wird ``owp-milp-optimization`` nicht als Befehl erkannt, ist meist die virtuelle Umgebung nicht aktiviert (siehe oben) oder das Tool noch nicht installiert. Die Umgebung muss aktiviert und das Tool installiert werden:
+Wird ``owp-tool`` nicht als Befehl erkannt, ist meist die virtuelle Umgebung nicht aktiviert (siehe oben) oder das Tool noch nicht installiert. Die Umgebung muss aktiviert und das Tool installiert werden:
 
 .. code-block:: batch
 
-   python -m pip install owp-milp-optimization
+   python -m pip install owp-tool
 
 Ist das Tool installiert und wird der Befehl trotzdem nicht gefunden, kann die Anwendung auch über Python gestartet werden:
 
 .. code-block:: batch
 
-   python -m owp_milp_optimization
+   python -m owp_tool
 
 Port 8501 ist bereits belegt
 ----------------------------
@@ -97,6 +97,6 @@ Falls bereits eine andere Streamlit-Anwendung läuft, kann ein anderer Port verw
 
 .. code-block:: batch
 
-   owp-milp-optimization --server.port 8502
+   owp-tool --server.port 8502
 
 Die Anwendung ist anschließend unter ``http://localhost:8502`` erreichbar.
