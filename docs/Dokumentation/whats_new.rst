@@ -8,9 +8,8 @@ v0.1.0 -- xxx (xxx xx, 2026)
 New Features
 ------------
 
-- Add command ``owp-milp-optimization`` to start the dashboard from any
-  directory after the installation (alternatively
-  ``python -m owp_milp_optimization``)
+- Add command ``owp-tool`` to start the dashboard from any directory after the
+  installation (alternatively ``python -m owp_tool``)
 
 Improvements
 ------------
@@ -32,8 +31,10 @@ Improvements
 - Declare the license as SPDX expression in the package metadata (PEP 639)
 - Add classifiers, keywords and links to the documentation, issues and
   changelog to the package metadata
-- Describe the installation from PyPI and the start with
-  ``owp-milp-optimization`` in the README and the documentation
+- Rename the project from ``owp_milp_optimization`` to ``owp-tool`` (package,
+  import name ``owp_tool``, GitHub repository and documentation)
+- Describe the installation from PyPI and the start with ``owp-tool`` in the
+  README and the documentation
 
 Fixes
 -----
