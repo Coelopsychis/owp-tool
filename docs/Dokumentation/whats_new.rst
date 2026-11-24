@@ -8,6 +8,9 @@ v0.1.0 -- xxx (xxx xx, 2026)
 New Features
 ------------
 
+- Add command ``owp-tool`` to start the dashboard from any directory after the
+  installation (alternatively ``python -m owp_tool``)
+
 Improvements
 ------------
 
@@ -17,6 +20,23 @@ Improvements
 - Add suite of tests for all stages of ``model.py`` (energy system build,
   parametrization, solvers & solving, results postprocessing, and KPI
   calculation)
+- Keep solver logs in memory instead of writing them into the package
+  directory
+- Create downloads and read uploads in memory instead of using a temporary
+  folder in the package directory
+- Remove the button that saved the input data into the package directory (the
+  energy system download contains the same files)
+- Define the version only once in the package (``pyproject.toml`` and the
+  documentation read it from there)
+- Declare the license as SPDX expression in the package metadata (PEP 639)
+- Add classifiers, keywords and links to the documentation, issues and
+  changelog to the package metadata
+- Rename the project from ``owp_milp_optimization`` to ``owp-tool`` (package,
+  import name ``owp_tool``, GitHub repository and documentation)
+- Describe the installation from PyPI and the start with ``owp-tool`` in the
+  README and the documentation
+- Add GitHub workflow that publishes releases to PyPI (pre-releases to
+  TestPyPI)
 
 Fixes
 -----
@@ -27,6 +47,12 @@ Fixes
   fixed capacity (results of existing energy systems may change)
 - Fix detection of infeasible optimization problems with HiGHS
 - Fix handling of SCIP reaching the time limit without a feasible solution
+- Fix ``PermissionError`` on Windows when running another optimization with
+  HiGHS
+- Fix ``FileNotFoundError`` for the license file on the home page when the
+  dashboard runs from an installed package
+- Fix ``PermissionError`` on the optimization page when the package directory
+  is read-only
 
 Contributors
 ------------
@@ -90,7 +116,6 @@ Improvements
 - Update README installation reference to current package structure
 - Improve result visualization
 - Add new and improve old tooltips
-
 
 Fixes
 -----

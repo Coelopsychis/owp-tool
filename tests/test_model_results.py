@@ -17,7 +17,7 @@ import pandas as pd
 import pytest
 from pyomo.environ import value
 
-from owp_milp_optimization.model import LCOH
+from owp_tool.model import LCOH
 
 TOL = 1e-6
 

@@ -1,4 +1,4 @@
-"""Shared fixtures for the tests of ``owp_milp_optimization.model``.
+"""Shared fixtures for the tests of ``owp_tool.model``.
 
 The fixtures provide
 
@@ -14,14 +14,13 @@ part. Tests must treat them as read-only.
 """
 import copy
 import json
-import os
 from importlib import resources
 
 import numpy as np
 import pandas as pd
 import pytest
 
-from owp_milp_optimization import model
+from owp_tool import model
 
 N_STEPS = 24
 
@@ -159,24 +158,14 @@ def _scaled_invest(cat, **overrides):
     return params
 
 
-def _solve(data, param_units, param_opt, logdir):
-    """Build and solve an energy system like the dashboard does.
-
-    The solver log is written to ``<logdir>/solverlogs`` instead of the
-    package directory. ``solve_model`` derives that path from the module's
-    ``__file__``, so it is redirected for the duration of the solve. Every
-    solve gets its own directory because HiGHS keeps its log file open while
-    the solved model is alive, which would otherwise make the next solve fail
-    on Windows (see ``test_consecutive_solves_with_shared_log_dir``).
-    """
+def _solve(data, param_units, param_opt):
+    """Build and solve an energy system like the dashboard does."""
     es = model.EnergySystem(data, param_units, param_opt)
     es.generate_buses()
     es.generate_sources()
     es.generate_sinks()
     es.generate_components()
-    with pytest.MonkeyPatch.context() as mp:
-        mp.setattr(model, '__file__', os.path.join(str(logdir), 'model.py'))
-        status = es.solve_model()
+    status = es.solve_model()
     return es, status
 
 
@@ -187,7 +176,7 @@ def shipped_defaults():
     Units are numbered like the dashboard does (``hp`` -> ``hp1``).
     Returns ``(param_units, param_opt)``.
     """
-    input_dir = resources.files('owp_milp_optimization') / 'input'
+    input_dir = resources.files('owp_tool') / 'input'
     with (input_dir / 'param_units.json').open(encoding='utf-8') as f:
         param_units = {f'{cat}1': p for cat, p in json.load(f).items()}
     with (input_dir / 'param_opt.json').open(encoding='utf-8') as f:
@@ -220,12 +209,9 @@ def scaled_invest():
 
 
 @pytest.fixture(scope='session')
-def solve_es(tmp_path_factory):
+def solve_es():
     """Return ``solve(data, param_units, param_opt) -> (es, status)``."""
-    def solve(data, param_units, param_opt):
-        logdir = tmp_path_factory.mktemp('solver')
-        return _solve(data, param_units, param_opt, logdir)
-    return solve
+    return _solve
 
 
 @pytest.fixture(scope='session')
