@@ -4,12 +4,6 @@
 
 ..  toctree::
     :maxdepth: 2
-    :hidden:
-
-    Startseite
-
-..  toctree::
-    :maxdepth: 2
     :caption: Erste Schritte
     :hidden:
 
@@ -17,7 +11,6 @@
     Erste_Schritte/Start
     Erste_Schritte/Toolaufbau
     Erste_Schritte/Erstes_Energiesystem
-    Erste_Schritte/Tutorials
 
 ..  toctree::
     :maxdepth: 2
@@ -33,24 +26,15 @@
     :caption: Dokumentation
     :hidden:
 
-    Dokumentation/Handbuch
-    Dokumentation/Optimierung
+    Dokumentation/Energiesystemoptimierung
     Dokumentation/Solver
-    z_Literatur
-    Dokumentation/whats_new
+    Datengrundlage
 
 ..  toctree::
     :maxdepth: 2
-    :caption: Galerie
+    :caption: Entwicklung
     :hidden:
 
-    Galerie/Anwendungsbeispiele
-    Galerie/Veröffentlichungen
-
-..  toctree::
-    :maxdepth: 2
-    :caption: Weiterentwicklung
-    :hidden:
-
-    Weiterentwicklung/Inhalt
-    Weiterentwicklung/Anleitung
+    Entwicklung/whats_new
+    Entwicklung/Veroeffentlichungen
+    Entwicklung/Anleitung

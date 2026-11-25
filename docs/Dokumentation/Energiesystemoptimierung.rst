@@ -1,6 +1,6 @@
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 Energiesystemoptimierung
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um eine Wärmelast mithilfe verschiedener Versorgungsanlagen zu jeder Zeit aus
 Sicht eines wirtschaftlich handelnden Akteurs bestmöglich zu decken, können

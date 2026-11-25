@@ -41,7 +41,7 @@ mathjax3_config = {
 # landing page
 # master_doc = 'contents'
 # names, years, etc
-project = 'owp-tool'
+project = 'OWP-Tool'
 year = '2024-2026'
 author = 'Malte Fritz & Jonas Freißmann'
 copyright = '{0}, {1}'.format(year, author)
@@ -89,7 +89,7 @@ html_theme = 'furo'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-
+html_title = '%s %s Dokumentation' % (project, release)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = '%s-%s' % (project, version)
